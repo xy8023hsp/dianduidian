@@ -1,0 +1,58 @@
+ <view class="container-game">
+
+<!--上部-->
+
+
+<!--对手头像-->
+<view class="v-tou">
+<view class="userinfo">
+   <image  class="userinfo-avatar" src="{{mdata.robots[0].tuUrl}}" mode="cover"></image> 
+   
+   <text class="userinfo-nickname">{{mdata.robots[0].name}}</text>
+   </view>
+      
+</view>
+
+<view class="up-game">
+
+<view class="timeBox">
+<view class="tiemDecade">
+<text class="textfont">{{decade}}</text>
+</view>
+<view class="tiemTheunit">
+<text class="textfont">{{theunit}}</text>
+</view>
+</view>
+</view>
+<!--中部时间-->
+<view class="center-game">
+<!-- 分割线 -->
+  <view class="divLine"></view>
+ <view class='canvasBox'>
+  <view class='bigCircle'></view>
+  <view class='littleCircle'></view>
+   <canvas canvas-id="runCanvas" id="runCanvas" class='canvas'></canvas>
+</view>
+  <!-- 分割线 -->
+  <view class="divLinedown"></view>
+</view>
+<!--下部-->
+<view class="down-game">
+<view class="timeBox">
+<view class="tiemDecade">
+<text class="textfont">{{mydecade}}</text>
+</view>
+<view class="tiemTheunit">
+<text class="textfont">{{mytheunit}}</text>
+</view>
+</view>
+<view class="v-btn">
+<!--点击按钮-->
+<button bindtap="click" hover-class="btn-hover"  class="circle">
+  <!-- <image mode="aspectFit" plain='true' src="{{dbutton}}" class="image"></image>   -->
+</button>
+</view>
+</view>
+
+
+ </view>

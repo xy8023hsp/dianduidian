@@ -1,0 +1,45 @@
+page{
+background-color: #E6E6FA;
+}
+.log-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+}
+.log-item {
+  margin: 10rpx;
+}
+
+.log-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+}
+
+.log-text {
+  margin-left: 50rpx;
+}
+
+.log-text-t {
+  margin-left: 65rpx;
+}
+.log-text-m {
+  margin-left: 65rpx;
+}
+
+.userinfo-avatar {
+  width: 95rpx;
+  height: 95rpx;
+  margin-left: 50rpx;
+  /* margin: 20rpx; */
+  border-radius: 50%;
+  
+}
+
+.log-text-name {
+  margin-left: 50rpx;
+  width: 120rpx;
+}

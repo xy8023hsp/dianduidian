@@ -1,0 +1,15 @@
+server:
+  port: 8899
+
+# 上传文件总的最大值
+#spring:
+#  servlet:
+#    multipart:
+#      enabled: true
+#      max-file-size: 20MB
+#      max-request-size: 200MB
+
+
+## jsp
+#spring.mvc.view.prefix=/WEB-INF/jsp/
+#spring.mvc.view.suffix=.jsp

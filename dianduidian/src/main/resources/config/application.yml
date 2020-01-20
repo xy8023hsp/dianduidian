@@ -1,0 +1,40 @@
+#server:
+#  port: 443
+#  ssl:
+#    key-store: classpath: 2971319_dianduidian.xyz.pfx
+#    key-password:
+#    key-store-type: PKCS12
+
+#数据库链接设置
+#spring:
+#  datasource:
+#    url: jdbc:mysql://106.54.112.65:3306/dianduidian
+#    username: root
+#    password: 8086836cctvA!
+
+#整合Mybatis
+#mybatis:
+  #  扫描数据持久对应的实体类 路径 Package级别
+#  type-aliases-package: com.dianduidian.xyz
+  #  mybatis 对应的 .xml文件路径
+#  mapper-locations: classpath:mapper/*.xml
+#  多层级目录  mapper-locations: classpath:mapper/**/**.xml
+
+
+
+# 上传文件总的最大值
+#spring:
+#  http:
+#    multipart:
+#      enabled: true
+#      max-file-size: 30MB
+#      max-request-size: 30MB
+
+#返回的前缀   目录对应src/main/webapp下
+#  mvc:
+#    view:
+#      prefix: classpath:/templates/
+#      suffix: .html
+#返回的后缀
+#  thymeleaf:
+#    cache: false

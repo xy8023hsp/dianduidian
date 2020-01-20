@@ -1,0 +1,59 @@
+.container-matching {
+  height: 100vh;
+    display: flex;
+  flex-direction: column;  
+   align-items: center;
+   background-color: #00FFFF;
+   /* background-image: url("https://dian-1259675363.cos.ap-chengdu.myqcloud.com/image/button/dianduidianbj3.jpg");
+   background-size:100% 100%;
+    -moz-background-size:100% 100%; */
+}
+
+.userinfo {
+  margin-top: 250rpx;
+ 
+}
+
+.userinfo-avatar {
+  width: 125rpx;
+  height: 125rpx;
+  margin-top: 10rpx;
+  /* margin: 20rpx; */
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.matching-cneter {
+  margin-top:20rpx;
+  text-align: center;
+  width: 100%;
+}
+
+.center-text {
+ color: #81535e;
+ text-align: center;
+}
+
+.matching-down {
+  margin-top: 20rpx;
+}
+
+.button-quxiao{
+  margin-top: 40rpx;
+  width: 250rpx;
+}
+
+.b-quxiao{
+  width: 200rpx;
+  background-color: burlywood;
+  color: white;
+  border-radius: 98rpx;
+   
+}
+
+.countDown{
+  color: #81535e;
+}

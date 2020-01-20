@@ -1,0 +1,52 @@
+ <view class="finish-game">
+
+<!--上部-->
+
+
+<!--对手头像-->
+<view class="v-tou">
+<view class="tou-frame">
+  <text class="text-frame">{{result}}</text>
+</view>
+</view>
+<!--中部时间-->
+<view class="center-game">
+<!-- 分割线 -->
+  <view class="divLine"></view>
+ <view class='row-one'>
+ <image  class="userinfo-avatar" src="{{youtuUrl}}" mode="cover"></image> 
+ <text class="userinfo-nickname"> {{youname}} 对手分数 </text>
+ <view class="timeBox">
+<view class="tiemDecade">
+<text class="textfont">{{decade}}</text>
+</view>
+<view class="tiemTheunit">
+<text class="textfont">{{theunit}}</text>
+</view>
+</view>
+</view>
+<view class='row-one'>
+ <image  class="userinfo-avatar" src="{{mytuUrl}}" mode="cover"></image> 
+ <text class="userinfo-nickname"> {{myname}} 您的分数 </text>
+ <view class="timeBox">
+<view class="tiemDecade">
+<text class="textfont">{{mydecade}}</text>
+</view>
+<view class="tiemTheunit">
+<text class="textfont">{{mytheunit}}</text>
+</view>
+</view>
+</view>
+  <!-- 分割线 -->
+  <view class="divLinedown"></view>
+</view>
+<!--下部-->
+<view class="down-game">
+
+
+<!--点击按钮-->
+<button bindtap="toagame" hover-class="hover"  class="circle">再来一局</button>
+
+<button bindtap="click" hover-class="hover"  class="circle">重新选择</button>
+</view>
+ </view>

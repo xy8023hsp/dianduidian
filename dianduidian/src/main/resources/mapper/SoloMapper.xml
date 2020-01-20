@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dianduidian.xyz.dao.SoloMapper" >
+  <resultMap id="BaseResultMap" type="com.dianduidian.xyz.pojo.Solo" >
+    <id column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="READY" property="ready" jdbcType="VARCHAR" />
+    <result column="FIXTURE" property="fixture" jdbcType="VARCHAR" />
+    <result column="createTime" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="victorId" property="victorId" jdbcType="VARCHAR" />
+    <result column="baseNum" property="baseNum" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, STATUS, READY, FIXTURE, createTime, victorId, baseNum
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from SOLO
+    where ID = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from SOLO
+    where ID = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.dianduidian.xyz.pojo.Solo" >
+    insert into SOLO (ID, STATUS, READY, 
+      FIXTURE, createTime, victorId, 
+      baseNum)
+    values (#{id,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{ready,jdbcType=VARCHAR}, 
+      #{fixture,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{victorId,jdbcType=VARCHAR}, 
+      #{baseNum,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.dianduidian.xyz.pojo.Solo" >
+    insert into SOLO
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        ID,
+      </if>
+      <if test="status != null" >
+        STATUS,
+      </if>
+      <if test="ready != null" >
+        READY,
+      </if>
+      <if test="fixture != null" >
+        FIXTURE,
+      </if>
+      <if test="createTime != null" >
+        createTime,
+      </if>
+      <if test="victorId != null" >
+        victorId,
+      </if>
+      <if test="baseNum != null" >
+        baseNum,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="ready != null" >
+        #{ready,jdbcType=VARCHAR},
+      </if>
+      <if test="fixture != null" >
+        #{fixture,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="victorId != null" >
+        #{victorId,jdbcType=VARCHAR},
+      </if>
+      <if test="baseNum != null" >
+        #{baseNum,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.dianduidian.xyz.pojo.Solo" >
+    update SOLO
+    <set >
+      <if test="status != null" >
+        STATUS = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="ready != null" >
+        READY = #{ready,jdbcType=VARCHAR},
+      </if>
+      <if test="fixture != null" >
+        FIXTURE = #{fixture,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        createTime = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="victorId != null" >
+        victorId = #{victorId,jdbcType=VARCHAR},
+      </if>
+      <if test="baseNum != null" >
+        baseNum = #{baseNum,jdbcType=INTEGER},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.dianduidian.xyz.pojo.Solo" >
+    update SOLO
+    set STATUS = #{status,jdbcType=VARCHAR},
+      READY = #{ready,jdbcType=VARCHAR},
+      FIXTURE = #{fixture,jdbcType=VARCHAR},
+      createTime = #{createTime,jdbcType=TIMESTAMP},
+      victorId = #{victorId,jdbcType=VARCHAR},
+      baseNum = #{baseNum,jdbcType=INTEGER}
+    where ID = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

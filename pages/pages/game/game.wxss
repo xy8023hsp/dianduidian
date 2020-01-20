@@ -1,0 +1,175 @@
+.container-game {
+  height: 100vh;
+    display: flex;
+  flex-direction: column;  
+   align-items: center;
+   background-color: #00FFFF;
+   /* background-image: url("https://dian-1259675363.cos.ap-chengdu.myqcloud.com/image/button/dianduidianbj3.jpg");
+   background-size:100% 100%;
+    -moz-background-size:100% 100%; */
+}
+
+.v-tou {
+  width: 100%;
+}
+
+.userinfo {
+  padding-left: 0rpx;
+  width: 100%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+
+.up-game {
+ margin-top: 200rpx;
+}
+
+.userinfo-avatar {
+  width: 95rpx;
+  height: 95rpx;
+  margin-top: 10rpx;
+  /* margin: 20rpx; */
+  border-radius: 50%;
+  
+}
+
+.timeBox {
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+  width: 250rpx;
+  height: 110rpx;
+  background-color: #f5f5f5;
+}
+
+.tiemDecade {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  width: 105rpx;
+  height: 90rpx;
+  background-color: #ddd;
+  
+}
+
+.tiemTheunit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  width: 105rpx;
+  height: 90rpx;
+  background-color: #ddd;
+}
+
+.textfont {
+  font-size:90rpx;
+  font-weight: 500;
+  font-family: FangSong;
+  color: beige;
+}
+
+.center-game {
+width: 100%
+}
+
+/*分割线样式*/
+.divLine{
+margin-top: 10rpx;
+ background: #E0E3DA;
+ width: 100%;
+ height: 5rpx;
+}
+
+.divLinedown{
+margin-top: 0rpx;
+ background: #E0E3DA;
+ width: 100%;
+ height: 5rpx;
+}
+
+.down-game {
+  
+}
+
+
+.canvasBox{
+  height: 150rpx;
+  position: relative;
+  background-color: #00FFFF;
+}
+.bigCircle{
+  width: 105rpx;
+  height: 105rpx;
+  border-radius: 50%;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  background-color: #ddd;
+}
+.littleCircle{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  background-color: #eee;
+}
+.canvas{
+  width: 124rpx;
+  height: 124rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto auto;
+  z-index: 99;
+}
+
+
+.image{
+  
+  margin-left: -22rpx;
+  
+   display: flex;
+   width: 135rpx;
+    height: 135rpx;
+}
+
+.circle{
+     background-image: url("https://dian-1259675363.cos.ap-chengdu.myqcloud.com/image/button/dianji.png"); 
+     background-size:100% 100%;
+    -moz-background-size:100% 100%;
+    width: 70px;
+    height: 70px;
+    border: 0 solid #ffffff;
+    border-radius: 250px; 
+   font-size:0;
+}
+
+.btn-hover{
+  background: url("https://dian-1259675363.cos.ap-chengdu.myqcloud.com/image/button/jiayou.png");
+  background-size:100% 100%;
+    -moz-background-size:100% 100%;
+   display: flex;
+   width: 135rpx;
+    height: 135rpx;
+}
+
+.v-btn{
+  margin-top: 200rpx;
+}

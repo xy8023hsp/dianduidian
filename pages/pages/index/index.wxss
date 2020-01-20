@@ -1,0 +1,99 @@
+/**index.wxss**/
+.container-index {
+  height: 100vh;
+    display: flex;
+  flex-direction: column;  
+  /* align-items: center; */
+   background-image: url("https://dian-1259675363.cos.ap-chengdu.myqcloud.com/image/button/dianduidianbj3.jpg");
+   background-size:100% 100%;
+    -moz-background-size:100% 100%;
+} 
+
+.userinfo {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  padding-left: 0rpx;
+ 
+}
+
+.userinfo-avatar {
+  width: 95rpx;
+  height: 95rpx;
+  margin-top: 10rpx;
+  /* margin: 20rpx; */
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 600rpx;
+  /* margin-bottom: 30px; */
+  margin-left: 187.5rpx;
+  text-align: center;
+  width:50%;
+}
+
+.switchcss{
+padding: 0rpx;
+/* background-color: yellow; */
+height: 300rpx;
+}
+
+.swipercss{
+  width: 375rpx;
+  margin-top: 0rpx;
+  color: white;
+  border:none;
+  background-size:100% 100%;
+    -moz-background-size:100% 100%;
+}
+
+.btn1 {
+  width: 375rpx;
+  margin-top: 0rpx;
+  color: white;
+  border:none;
+  background-image: url("https://dian-1259675363.cos.ap-chengdu.myqcloud.com/image/button/danrenduizhan.png");
+  background-size:100% 100%;
+    -moz-background-size:100% 100%;
+}
+
+.btn2 {
+  width: 375rpx;
+  margin-top: 0rpx;
+  color: white;
+  border:none;
+  background-image: url("https://dian-1259675363.cos.ap-chengdu.myqcloud.com/image/button/duorenduizhan.png");
+  background-size:100% 100%;
+    -moz-background-size:100% 100%;
+}
+
+.btn3 {
+  width: 375rpx;
+  margin-top: 0rpx;
+  color: white;
+  border:none;
+  background-image: url("https://dian-1259675363.cos.ap-chengdu.myqcloud.com/image/button/chuangjianfangjian.png");
+  background-size:100% 100%;
+    -moz-background-size:100% 100%;
+}
+
+.sitem{
+  width: 375rpx;
+  margin-top: 20rpx;
+  height: 110rpx;
+  color: black;
+
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
+}

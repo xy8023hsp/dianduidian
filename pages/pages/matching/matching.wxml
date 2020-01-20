@@ -1,0 +1,29 @@
+<!-- matching.wxml-->
+
+ <view class="container-matching">
+
+<!--上部-->
+ <view class="userinfo">
+   <image  class="userinfo-avatar" src="{{youImageUrl}}" mode="cover"></image> 
+   </view>
+   <view>
+      <text class="userinfo-nickname">{{youName}}</text>
+  </view> 
+<!--中部-->
+<view class="matching-cneter">
+<text class="center-text">----- - - -匹 配 中- - - -----</text>
+</view>
+<!--下部-->
+
+<view class='countDown'>匹配用时：<text style='color:red'>{{countDownNum}}</text>s</view>
+ <view class="matching-down">
+ <image  class="userinfo-avatar" src="{{meImageUrl}}" mode="cover"></image>
+ </view>  
+ <view>
+      <text class="userinfo-nickname">{{meName}}</text>
+      </view>
+      
+<view class="button-quxiao">
+<button bindtap ="start" class="b-quxiao" disabled="{{disabled}}">{{buttondown}}</button>
+</view> 
+</view>

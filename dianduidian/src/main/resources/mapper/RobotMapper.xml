@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dianduidian.xyz.dao.RobotMapper" >
+  <resultMap id="BaseResultMap" type="com.dianduidian.xyz.pojo.Robot" >
+    <id column="machineId" property="machineId" jdbcType="VARCHAR" />
+    <result column="tuUrl" property="tuUrl" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="SCORE" property="score" jdbcType="INTEGER" />
+    <result column="CREATETIME" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="SOLO_ID" property="soloId" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    machineId, tuUrl, NAME, SCORE, CREATETIME,SOLO_ID
+  </sql>
+  <sql id="Base_Column_List2" >
+    machineId, tuUrl, NAME, SCORE, CREATETIME,SOLO_ID,total
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from ROBOT
+    where machineId = #{machineId,jdbcType=VARCHAR}
+  </select>
+  <select id="selectScore" resultMap="BaseResultMap"  >
+    SELECT <include refid="Base_Column_List" />,
+    (SELECT SUM(score) from ROBOT where name = ro.name  ) total
+from ROBOT ro ORDER BY score DESC LIMIT 0,100;
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from ROBOT
+    where machineId = #{machineId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.dianduidian.xyz.pojo.Robot" >
+    insert into ROBOT (machineId, tuUrl, NAME, 
+      SCORE, CREATETIME)
+    values (#{machineId,jdbcType=VARCHAR}, #{tuUrl,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{score,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.dianduidian.xyz.pojo.Robot" >
+    insert into ROBOT
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="machineId != null" >
+        machineId,
+      </if>
+      <if test="tuUrl != null" >
+        tuUrl,
+      </if>
+      <if test="name != null" >
+        NAME,
+      </if>
+      <if test="score != null" >
+        SCORE,
+      </if>
+      <if test="createTime != null" >
+        CREATETIME,
+      </if>
+      <if test="soloId != null" >
+        SOLO_ID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="machineId != null" >
+        #{machineId,jdbcType=VARCHAR},
+      </if>
+      <if test="tuUrl != null" >
+        #{tuUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="score != null" >
+        #{score,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="soloId != null" >
+        #{soloId,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.dianduidian.xyz.pojo.Robot" >
+    update ROBOT
+    <set >
+      <if test="tuUrl != null" >
+        tuUrl = #{tuUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        NAME = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="score != null" >
+        SCORE = #{score,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        CREATETIME = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where machineId = #{machineId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.dianduidian.xyz.pojo.Robot" >
+    update ROBOT
+    set tuUrl = #{tuUrl,jdbcType=VARCHAR},
+      NAME = #{name,jdbcType=VARCHAR},
+      SCORE = #{score,jdbcType=INTEGER},
+      CREATETIME = #{createTime,jdbcType=TIMESTAMP}
+    where machineId = #{machineId,jdbcType=VARCHAR}
+  </update>
+</mapper>

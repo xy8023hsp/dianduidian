@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class="container-index">
+  <view class="userinfo">
+    <!--pics文件夹下的background.jpg文件-->
+    <!-- <image class='background' src="/image/button/indexbeijing.jpg" mode="aspectFill"></image> -->
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <swiper class="switchcss"  autoplay="true" circular="true" interval="5000" duration="500" previous-margin="0px" next-margin="0px">
+
+      <swiper-item wx:for="{{background}}" wx:key="*this">
+        <!-- <view><button class="btn1">开始游戏</button></view> -->
+        <!-- <view class="sitem" src="/image/button/kaishi.jpg"> -->
+        <view>
+        <button bindtap="start" data-id="{{item}}" data-name="{{userInfo.nickName}}"
+        data-avatarUrl="{{userInfo.avatarUrl}}" class="{{item}}" >
+            .
+             </button>
+        </view>
+        <!-- <view >
+          <image class="swipercss" src="https://dian-1259675363.cos.ap-chengdu.myqcloud.com/image/button/danrenduizhan.png"></image>
+        </view> -->
+      </swiper-item>
+
+    </swiper>
+
+
+
+
+  </view>
+  
+</view>

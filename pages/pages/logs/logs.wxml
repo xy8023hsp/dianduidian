@@ -1,0 +1,25 @@
+<!--logs.wxml-->
+<!-- <view class="container log-list">
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
+</view> -->
+
+<view class="container log-list">
+  <view class="log-line">
+  <text class="log-text-t">排行</text>
+  <text class="log-text-t">头像</text>
+  <text class="log-text-t">昵称</text>
+  <text class="log-text-t">最高分</text>
+  <text class="log-text-t">累加分</text>
+  </view>
+  <block wx:for="{{logs.data}}" wx:for-item="log">
+  <view class="log-line">
+  <text class="log-text">No. {{index + 1}}</text>
+  <image  class="userinfo-avatar" src="{{log.tuUrl}}" mode="cover"></image> 
+  <text class="log-text-name">{{log.name}}</text>
+  <text class="log-text">{{log.score}}</text>
+  <text class="log-text-m">{{log.total}}</text>
+  </view>
+  </block>
+</view>

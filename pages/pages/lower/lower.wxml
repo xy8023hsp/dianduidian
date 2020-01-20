@@ -1,0 +1,5 @@
+<view class='box'>
+<scroll-view scroll-y='true' style="height:{{height}}px" bindscrolltolower='lower'>
+  <view wx:for="{{res}}" data-id="{{index}}" wx:key="{{index}}" style="height:{{(height/6)-1}}px;width:100%;text-align:center;line-height:{{(height/6)-1}}px; border-bottom:1px solid #ccc">{{item}}</view>
+</scroll-view>
+</view>
